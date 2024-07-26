@@ -7,7 +7,7 @@ body {
 }
 
 .top-bar {
-  background-color: #333;
+  background-color: #282738;
   padding: 10px;
   margin:10px;
   display: flex;
@@ -17,13 +17,28 @@ body {
 }
 
 .icon {
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 16px;
-    height: 16px; 
-    display: inline-block;
-    margin-right: 5px; 
-    background-color: #333;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px; 
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.layout {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px; 
+  display: inline-block;
+  margin-right: 5px; 
+}
+
+.power {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor :default;
 }
 
 .top-bar .left {
@@ -51,43 +66,43 @@ body {
 }
 
 .terminal {
-    display: none;
-    position: fixed;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    max-width: 800px;
-    background-color: #333;
-    border: 1px solid #444;
-    border-radius: 5px;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 800px;
+  background-color: #333;
+  border: 1px solid #444;
+  border-radius: 5px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
   
-  .terminal-header {
-    background-color: #444;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #555;
-  }
-  
-  .terminal-body {
-    padding: 10px;
-    color: #ddd;
-  }
-  
-  .terminal-header button {
-    background: none;
-    border: none;
-    color: #ddd;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .terminal-header button:hover {
-    color: #fff;
-  }
+.terminal-header {
+  background-color: #444;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #555;
+}
+
+.terminal-body {
+  padding: 10px;
+  color: #ddd;
+}
+
+.terminal-header button {
+  background: none;
+  border: none;
+  color: #ddd;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.terminal-header button:hover {
+  color: #fff;
+}
 

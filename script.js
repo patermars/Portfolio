@@ -36,6 +36,13 @@ setInterval(() => {
     currentTime.textContent = `${hours % 12 || 12}:${minutes.toString().padStart(2, '0')} ${ampm}`;
 }, 1000);
 
+// Function to use power button
+function power(){
+    const userConfirmation = confirm('Do you want to close this webpage?');
+    if (userConfirmation) {
+      window.close();
+    }
+}
 
 // Function to open the terminal
 function openTerminal() {
