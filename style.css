@@ -1,129 +1,93 @@
 body {
-    margin: 0;
-    padding: 15px 20px;
-    min-height: 99%;
-    width: 100%;
-    min-width: 550px;
-    color: #519975;
-    background: #211D1B;
-    font-family: cursor, monospace;
-    overflow-x: hidden;
-  }
-  ::selection {
-    color: #211830;
-    background-color: #519975;
-  }
-  ::-moz-selection {
-    color: #211830;
-    background-color: #519975;
-  }
-  textarea {
-    left: -1000px;
-    position: absolute;
-  }
-  b {
-    font-weight: bold;
-    text-decoration: underline;
-  }
-  .cursor {
-    font-size: 12px;
-    color: #73ABAD;
-    background-color: #73ABAD;
-    position: relative;
-    opacity: 1;
-    height: 1px;
-    width: 10px;
-    max-width: 10px;
-    transform: translateY(4px);
-    overflow: hidden;
-    text-indent: -5px;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 10;
+  background-color: #222;
+  color: #CAA9E0;
+}
+
+.top-bar {
+  background-color: #333;
+  padding: 10px;
+  margin:10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px; 
     display: inline-block;
-    text-decoration: blink;
-    animation: blinker 1s linear infinite;
+    margin-right: 5px; 
+    background-color: #333;
+}
+
+.top-bar .left {
+  display: flex;
+  align-items: center;
+}
+
+
+.top-bar .left .info {
+  margin-right: 20px;
+}
+
+.top-bar .right {
+  display: flex;
+  align-items: center;
+}
+
+.top-bar .right .item {
+  margin-right: 20px;
+}
+
+
+.top-bar .right .item .value {
+  font-size: 16px;
+}
+
+.terminal {
+    display: none;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 800px;
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  @keyframes blinker {
-    50% {
-      opacity: 0;
-    }
+  
+  .terminal-header {
+    background-color: #444;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #555;
   }
-  #command {
-    cursor: text;
-    height: 50px;
-    color: #73ABAD;
+  
+  .terminal-body {
+    padding: 10px;
+    color: #ddd;
   }
-  #liner {
-    line-height: 1.3em;
-    margin-top: -2px;
-    animation: show 0.5s ease forwards;
-    animation-delay: 1.2s;
-    opacity: 0;
+  
+  .terminal-header button {
+    background: none;
+    border: none;
+    color: #ddd;
+    cursor: pointer;
+    font-size: 16px;
   }
-  #liner::before {
-    color: #519975;
-    content: "visitor@portfolio:~$";
-  }
-  #liner.password::before {
-    content: "Password:";
-  }
-  @keyframes show {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  p {
-    display: block;
-    line-height: 1.3em;
-    margin: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0;
-    letter-spacing: 0.05em;
-    animation: typing 0.5s steps(30, end);
-  }
-  .no-animation {
-    animation: typing 0 steps(30, end);
-  }
-  .margin {
-    margin-left: 20px;
-  }
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-  .index {
-    color: #DCDCCC;
-  }
-  .color2 {
-    color: #B89076;
-  }
-  .command {
-    color: #73ABAD;
-    text-shadow: 0 0 5px #73ABAD; 
-  }
-  .error {
-    color: #B89076;
-  }
-  .white {
+  
+  .terminal-header button:hover {
     color: #fff;
   }
-  .inherit,
-  a {
-    color: #9C8394;
-  }
-  a {
-    text-decoration: inherit;
-  }
-  a:hover {
-    background: #73ABAD;
-    color: #211830;
-  }
-  a:focus {
-    outline: 0;
-  }
+

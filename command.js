@@ -5,7 +5,11 @@ var email = 'mailto:a5ryansinha@gmail.com';
 whois = [
     "<br>",
     "Thanks for your interest, here is a quick story of me and this website.",
-    "My name is Aryan Kumar Sinha, and I am a Computer Science Engineering graduate. I love programming and am always eager to learn and try new things.I have hands-on experience with various programming languages, database management, and machine learning. I enjoy solving problems and working on projects that make a difference. My skills cover a range of technologies, and I am excited about discovering more. I am open to opportunities that match my skills and interests.",
+    "My name is Aryan Kumar Sinha, and I am a Computer Science Engineering graduate.",
+    "I love programming and am always eager to learn and try new things.",
+    "I have hands-on experience with various programming languages, database management, and machine learning. ",
+    "I enjoy solving problems and working on projects that make a difference. My skills cover a range of technologies, and I am excited about discovering more. ",
+    "I am open to opportunities that match my skills and interests.",
     "I do my work mainly in C-Language, C++ and JAVA. C++ and Data Structure & Algorithm are my stronger section. Besides these I know Web Development, LINUX and database as well.",
     "Thanks again for reading this, because of people like you, it exists and prospers!",
     "Cheers",
