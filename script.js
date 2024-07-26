@@ -64,13 +64,15 @@ window.addEventListener("keydown", (event) => {
     }
 });
 
+document.addEventListener('mousemove', hideOverlay);
+document.addEventListener('keydown', hideOverlay);
 
 function power() {
-    document.getElementById('dialog').style.display = 'flex';
+    document.getElementById('power').style.display = 'flex';
 }
 
 function closeDialog() {
-    document.getElementById('dialog').style.display = 'none';
+    document.getElementById('power').style.display = 'none';
 }
 
 function shutdown() {
@@ -79,4 +81,12 @@ function shutdown() {
 
 function restart() {
     window.location.reload(); // Reloads the current page
+}
+
+function suspend() {
+    document.getElementById('overlay').style.display = 'block';
+}
+
+function hideOverlay() {
+    document.getElementById('overlay').style.display = 'none';
 }
