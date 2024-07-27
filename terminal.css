@@ -60,7 +60,7 @@
   }
   #liner::before {
     color: #519975;
-    content: "visitor@portfolio:~$";
+    content: " visitor@portfolio:~$ ";
   }
   #liner.password::before {
     content: "Password:";

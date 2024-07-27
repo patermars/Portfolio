@@ -12,7 +12,7 @@ var commands = [];
 setTimeout(function() {
   loopLines(banner, "", 80);
   textarea.focus();
-}, 100);
+}, 1000);
 
 window.addEventListener("keyup", enterKey);
 
@@ -48,7 +48,7 @@ function enterKey(e) {
     if (e.keyCode == 13) {
       commands.push(command.innerHTML);
       git = commands.length;
-      addLine("visitor@portfolio:~$ " + command.innerHTML, "no-animation", 0);
+      addLine(" visitor@portfolio:~$ " + command.innerHTML, "no-animation", 0);
       commander(command.innerHTML.toLowerCase());
       command.innerHTML = "";
       textarea.value = "";
@@ -117,7 +117,7 @@ function commander(cmd) {
       setTimeout(function() {
         terminal.innerHTML = '<a id="before"></a>';
         before = document.getElementById("before");
-      }, 1);
+      }, 50);
       break;
     case "banner":
       loopLines(banner, "", 80);
@@ -152,7 +152,7 @@ function commander(cmd) {
 function newTab(link) {
   setTimeout(function() {
     window.open(link, "_blank");
-  }, 500);
+  }, 1000);
 }
 
 function addLine(text, style, time) {
@@ -172,7 +172,8 @@ function addLine(text, style, time) {
 
     before.parentNode.insertBefore(next, before);
 
-    window.scrollTo(0, document.body.offsetHeight);
+    terminal.scrollTop = terminal.scrollHeight;
+
   }, time);
 }
 
