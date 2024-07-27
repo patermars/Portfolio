@@ -3,6 +3,8 @@ const cpuUtilization = document.getElementById("cpu-utilization");
 const memoryUsage = document.getElementById("memory-usage");
 const currentTime = document.getElementById("current-time");
 const window_name=document.getElementById("window_name");
+const uptimeElement = document.getElementById("uptime");
+const startTime = Date.now();
 
 // Function to generate random values for internet speed, CPU utilization, and memory usage
 function getRandomValues() {
@@ -94,3 +96,16 @@ function suspend() {
 function hideOverlay() {
     document.getElementById('overlay').style.display = 'none';
 }
+
+function updateUptime() {
+    const now = Date.now();
+    const uptime = now - startTime;
+
+    const hours = Math.floor(uptime / (1000 * 60 * 60));
+    const minutes = Math.floor((uptime % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((uptime % (1000 * 60)) / 1000);
+
+    uptimeElement.textContent = `Uptime: ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+}
+
+setInterval(updateUptime, 1000);

@@ -25,15 +25,6 @@ body {
   margin-right: 5px;
 }
 
-.layout {
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-  display: inline-block;
-  margin-right: 5px;
-}
-
 .power-button {
   background: none;
   border: none;
@@ -70,7 +61,7 @@ body {
 }
 
 .terminal {
-  display: block;
+  display: none;
   position: fixed;
   top: 70px; 
   left: 0;
@@ -126,10 +117,12 @@ body {
 }
 
 .power-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  width: auto;
+  border-radius: 15px;
 }
 
 .power-content button {
@@ -148,4 +141,75 @@ body {
   background-color: black;
   z-index: 9999; /* Ensure it's on top of other content */
   display: none; /* Initially hidden */
+}
+
+.left-section {
+  position: relative;
+  height: 100%;
+}
+
+.left-section img {
+  object-fit: cover;
+  width: auto;
+  height: 100%
+}
+
+
+.left-section .username {
+  background-color: #d1605e;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  left: 16%;
+  border-radius: 15px;
+  height:30px;
+  width: 300px;
+  text-align: center;
+}
+
+.left-section .uptime {
+  background-color: #3a3a3a;
+  padding: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 16%;
+  border-radius: 15px;
+  height:30px;
+  width: 300px;
+  text-align: center;
+}
+
+.right-section {
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: space-between;
+  background-color: burlywood;
+}
+
+.right-section .button {
+  background-color: #333;
+  height: 50px;
+  width: 50px;
+  padding: 20px;
+  margin:20px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.right-section .button svg {
+  width: 256px;
+  height: 256px;
+  transition: fill 0.3s;
+  
+}
+
+.right-section .button:hover {
+  background-color: #4caf50;
+  transform: scale(1.1);
 }
