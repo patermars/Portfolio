@@ -1,4 +1,6 @@
 # Portfolio
-Portfolio Website made using basic HTML, CSS and Javascript.
+This is an Arch based Qtile/BSDWM/Sway/I3WM/OpenBox/Aesome/Hyperland kinda themed portfolio website.
 
-Live @ https://patermars.github.io/Portfolio/
+Its still in progress so don't judge on the current look.
+
+Thank you : )
