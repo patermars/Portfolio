@@ -4,6 +4,7 @@ const memoryUsage = document.getElementById("memory-usage");
 const currentTime = document.getElementById("current-time");
 const window_name=document.getElementById("window_name");
 const uptimeElement = document.getElementById("uptime");
+const powerContent = document.querySelector('.power-content');
 const startTime = Date.now();
 let isDialogOpen = false;
 
@@ -76,8 +77,7 @@ document.addEventListener('keydown', hideOverlay);
 
 // Function to check if the click is outside the power-content element
 function handleClickOutside(event) {
-    var powerContent = document.querySelector('.power-content');
-    if (isDialogOpen && powerContent && !powerContent.contains(event.target)) {
+    if (isDialogOpen && !powerContent.contains(event.target)) {
         closeDialog();
     }
 }
@@ -85,6 +85,7 @@ function handleClickOutside(event) {
 function power() {
     document.getElementById('power').style.display = 'flex';
     isDialogOpen = true;
+    window_name.innerText="Rofi";
 
     // Add a small delay before adding the event listener
     setTimeout(() => {
@@ -94,7 +95,9 @@ function power() {
 
 function closeDialog() {
     isDialogOpen = false;
+    window_name.innerText="Desktop";
     document.getElementById('power').style.display = 'none';
+    document.removeEventListener('click', handleClickOutside);
 }
 
 function shutdown() {
