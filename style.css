@@ -52,6 +52,11 @@ body {
   margin-right: 20px;
 }
 
+.top-bar .center {
+  display: flex;
+  align-items: center;
+}
+
 .top-bar .right {
   display: flex;
   align-items: center;
@@ -130,7 +135,7 @@ body {
   margin: 5px;
   padding: 10px;
   font-size: 16px;
-  cursor: pointer;
+  cursor: default;
 }
 
 #overlay {

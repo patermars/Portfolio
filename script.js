@@ -2,6 +2,7 @@ const internetSpeed = document.getElementById("internet-speed");
 const cpuUtilization = document.getElementById("cpu-utilization");
 const memoryUsage = document.getElementById("memory-usage");
 const currentTime = document.getElementById("current-time");
+const window_name=document.getElementById("window_name");
 
 // Function to generate random values for internet speed, CPU utilization, and memory usage
 function getRandomValues() {
@@ -38,6 +39,7 @@ setInterval(() => {
 
 // Function to open the terminal
 function openTerminal() {
+    window_name.innerText="Terminal";
     document.getElementById("terminal").style.display = "block";
     document.getElementById('texter').focus();
     
@@ -45,7 +47,9 @@ function openTerminal() {
 
 // Function to close the terminal
 function closeTerminal() {
+    window_name.innerText="Desktop";
     document.getElementById("terminal").style.display = "none";
+
     
 }
 
