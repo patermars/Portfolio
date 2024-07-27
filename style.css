@@ -139,8 +139,15 @@ body {
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index: 9999; /* Ensure it's on top of other content */
-  display: none; /* Initially hidden */
+  z-index: 9999;
+  visibility: hidden; /* Initially hidden */
+  opacity: 0; /* Initially transparent */
+  transition: opacity 1s ease, visibility 1s ease; /* Transition effect for opacity and visibility */
+}
+
+#overlay.visible {
+  visibility: visible; /* Make visible */
+  opacity: 1; /* Fade to visible */
 }
 
 .left-section {
@@ -185,7 +192,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   justify-content: space-between;
-  background-color: burlywood;
+  background-color: #ecd9a3;
 }
 
 .right-section .button {
@@ -210,6 +217,6 @@ body {
 }
 
 .right-section .button:hover {
-  background-color: #4caf50;
+  background-color: #00878c;
   transform: scale(1.1);
 }

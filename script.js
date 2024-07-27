@@ -90,11 +90,11 @@ function restart() {
 }
 
 function suspend() {
-    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('overlay').classList.add('visible');
 }
 
 function hideOverlay() {
-    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('overlay').classList.remove('visible');
 }
 
 function updateUptime() {
