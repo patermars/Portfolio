@@ -172,7 +172,9 @@ function addLine(text, style, time) {
 
     before.parentNode.insertBefore(next, before);
 
-    terminal.scrollTop = terminal.scrollHeight;
+    requestAnimationFrame(function() {
+      liner.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    });
 
   }, time);
 }
