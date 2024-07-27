@@ -5,6 +5,7 @@ const currentTime = document.getElementById("current-time");
 const window_name=document.getElementById("window_name");
 const uptimeElement = document.getElementById("uptime");
 const startTime = Date.now();
+let isDialogOpen = false;
 
 // Function to generate random values for internet speed, CPU utilization, and memory usage
 function getRandomValues() {
@@ -73,11 +74,26 @@ window.addEventListener("keydown", (event) => {
 document.addEventListener('mousemove', hideOverlay);
 document.addEventListener('keydown', hideOverlay);
 
+// Function to check if the click is outside the power-content element
+function handleClickOutside(event) {
+    var powerContent = document.querySelector('.power-content');
+    if (isDialogOpen && powerContent && !powerContent.contains(event.target)) {
+        closeDialog();
+    }
+}
+
 function power() {
     document.getElementById('power').style.display = 'flex';
+    isDialogOpen = true;
+
+    // Add a small delay before adding the event listener
+    setTimeout(() => {
+        document.addEventListener('click', handleClickOutside);
+    }, 100);
 }
 
 function closeDialog() {
+    isDialogOpen = false;
     document.getElementById('power').style.display = 'none';
 }
 
