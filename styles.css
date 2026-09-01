@@ -147,6 +147,29 @@ button { cursor: pointer; font: inherit; border: none; background: none; }
 @keyframes spin-slow { to { transform: rotate(360deg); } }
 @keyframes bounce-y  { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
 @keyframes hero-in   { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:none} }
+@keyframes intro-word-in { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: none; } }
+@keyframes intro-name-exit {
+  from { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+  to { opacity: 0; transform: translate3d(-37vw, -34vh, 0) scale(0.24); }
+}
+@keyframes intro-screen-fade { from { opacity: 1; } to { opacity: 0; } }
+
+#intro-screen {
+  position: fixed; inset: 0; z-index: 1000; overflow: hidden;
+  display: grid; place-items: center; pointer-events: none;
+  background: var(--bg-page); color: var(--text-base);
+}
+.intro-name {
+  display: flex; flex-direction: column; align-items: flex-start;
+  font-family: var(--font-serif); font-size: clamp(3.4rem, 12vw, 10rem);
+  font-weight: 700; line-height: 0.86; letter-spacing: -0.045em;
+  text-transform: uppercase; transform-origin: center center;
+}
+.intro-name span { display: block; animation: intro-word-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.intro-name span:nth-child(2) { animation-delay: 0.12s; }
+.intro-name span:nth-child(3) { animation-delay: 0.24s; }
+#intro-screen.is-leaving { animation: intro-screen-fade 1.9s 0.2s ease forwards; }
+#intro-screen.is-leaving .intro-name { animation: intro-name-exit 1.75s cubic-bezier(0.76, 0, 0.24, 1) forwards; }
 
 #nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -669,4 +692,15 @@ footer {
   .nav-right     { gap: 8px; }
   .nav-toggle    { display: flex; }
   #back-top      { bottom: 20px; right: 20px; }
+}
+
+@media (max-width: 640px) {
+  @keyframes intro-name-exit {
+    from { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+    to { opacity: 0; transform: translate3d(-28vw, -29vh, 0) scale(0.2); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #intro-screen { display: none; }
 }

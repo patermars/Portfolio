@@ -96,6 +96,24 @@ const revealObs = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .skill-card')
   .forEach(el => revealObs.observe(el));
 
+const introScreen = document.getElementById('intro-screen');
+if (introScreen) {
+  let introStarted = false;
+  const finishIntro = () => {
+    if (introStarted) return;
+    introStarted = true;
+    introScreen.classList.add('is-leaving');
+    window.setTimeout(() => introScreen.remove(), 2100);
+  };
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    introScreen.remove();
+  } else {
+    window.addEventListener('load', () => window.setTimeout(finishIntro, 700), { once: true });
+    window.setTimeout(finishIntro, 2500);
+  }
+}
+
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', async (event) => {
