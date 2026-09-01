@@ -1,496 +1,512 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="google-site-verification" content="EV5lr5usw3g2xU_41dkyAdQ5VInrthefPG47YgQ5USE" />
-	<title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="EV5lr5usw3g2xU_41dkyAdQ5VInrthefPG47YgQ5USE">
+  <title>Aryan Kumar Sinha | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-	<!--Header(start)-->
-	<table id="header" border="0" width="100%"
-		cellpadding="0" cellspacing="0" bgcolor="#4CAF50">
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="90%" align="center">
-					<tr>
-						<td>
-							
 
-						</td>
+<nav id="nav">
+  <div class="container nav-inner">
+    <button class="nav-logo" data-scroll-target="home">Aryan Kumar Sinha</button>
+    <div class="nav-links" id="nav-links">
+      <button class="nav-link active" data-section="home" data-scroll-target="home">Home</button>
+      <button class="nav-link"        data-section="about" data-scroll-target="about">About</button>
+      <button class="nav-link"        data-section="projects" data-scroll-target="projects">Projects</button>
+      <button class="nav-link"        data-section="achievements" data-scroll-target="achievements">Achievements</button>
+      <a class="btn-resume" href="resume.pdf" target="_blank" rel="noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Resume
+      </a>
+    </div>
+    <div class="nav-right" style="display:flex;align-items:center;gap:10px;">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
 
-						<td>
-							<font face="Comic sans MS" size="6">
-								<b>Aryan Kumar Sinha</b>
-							</font>
-						</td>
+<div id="mobile-menu">
+  <div class="mobile-overlay" onclick="closeMenu()"></div>
+  <div class="mobile-drawer">
+    <button class="mob-link active" data-section="home" data-scroll-target="home">Home</button>
+    <button class="mob-link"        data-section="about" data-scroll-target="about">About</button>
+    <button class="mob-link"        data-section="projects" data-scroll-target="projects">Projects</button>
+    <button class="mob-link"        data-section="achievements" data-scroll-target="achievements">Achievements</button>
+    <a class="mob-resume" href="resume.pdf" target="_blank" rel="noreferrer" onclick="closeMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Resume
+    </a>
+  </div>
+</div>
 
-						<td width="15%">
-							
-						</td>
+<section id="home">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-blob hero-blob-3"></div>
+  <div class="hero-grid"></div>
 
-						<td>
-							<a href="#home" style="text-decoration:none">
-								<font face="Verdana" size="5" color=black>
-									Home
-								</font>
-							</a>
-						</td>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <span class="hero-tag">Welcome to my portfolio</span>
+      <h1 class="hero-h1">Hi Visitor!</h1>
+      <h2 class="hero-h2 gradient-text">Aryan Kumar Sinha</h2>
+      <p class="hero-p">Computer Science Engineering graduate passionate about programming, machine learning, and building impactful projects.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" data-scroll-target="about">Explore My Work</button>
+        <a class="btn-outline" href="mailto:aryan@example.com">Get in Touch</a>
+      </div>
+      <div class="hero-socials">
+        <a class="social-pill" href="https://github.com/patermars" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a class="social-pill" href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a class="social-pill" href="mailto:aryan@example.com" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
 
-						<td>
-							|
-						</td>
+    <div class="hero-img-wrap">
+      <div class="hero-img-rings">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="hero-img-circle">
+          <img src="pfp.jpeg" alt="Portrait of Aryan Kumar Sinha">
+        </div>
+      </div>
+    </div>
+  </div>
 
-						<td>
-							<a href="#about" style="text-decoration:none">
-								<font face="Verdana" size="5" color=black>
-									About
-								</font>
-							</a>
-						</td>
+  <button class="scroll-indicator" data-scroll-target="about" aria-label="Scroll down">
+    <span>Scroll</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+  </button>
+</section>
 
-						<td>
-							|
-						</td>
+<section id="about">
+  <div class="about-bg-r"></div>
+  <div class="about-bg-blob"></div>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-badge">Get to know me</span>
+      <h2>About Me</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-img-wrap reveal-left">
+        <div class="about-img-deco-1"></div>
+        <div class="about-img-deco-2"></div>
+        <div class="about-img-inner">
+          <img src="pfp.jpeg" alt="About Aryan Kumar Sinha">
+        </div>
+        <div class="about-badge">
+          <span class="about-badge-num">4+</span>
+          <span class="about-badge-lbl">Years Coding</span>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="about-prose">
+          <p>Thanks for your interest — here is a quick story about me and this website.</p>
+          <p>My name is <strong>Aryan Kumar Sinha</strong>, and I am a Computer Science Engineering graduate. I love programming and am always eager to learn and try new things. I have hands-on experience with various programming languages, database management, and machine learning.</p>
+          <p>I enjoy solving problems and working on projects that make a difference. My skills cover a range of technologies, and I am excited about discovering more. I am open to opportunities that match my skills and interests.</p>
+          <div class="about-quote">
+            <p>"I do my work mainly in C-Language, C++ and JAVA. C++ and Data Structures &amp; Algorithms are my stronger sections. Besides these I know Web Development, Linux and Databases as well."</p>
+            <span>— Cheers!</span>
+          </div>
+        </div>
+        <p class="skills-title">Technical Skills</p>
+        <div class="skills-grid" id="skills-grid">
+          <div class="skill-card" data-level="90">
+            <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div>
+            <div class="skill-name">C / C++</div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-card" data-level="75">
+            <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+            <div class="skill-name">Java</div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-card" data-level="85">
+            <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg></div>
+            <div class="skill-name">Data Structures</div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-card" data-level="70">
+            <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div class="skill-name">Web Development</div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-card" data-level="65">
+            <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="14" x2="22" y2="14"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="14" x2="4" y2="14"/></svg></div>
+            <div class="skill-name">Linux</div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+          <div class="skill-card" data-level="70">
+            <div class="skill-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+            <div class="skill-name">Database</div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-						<td>
-							<a href="#projects" style="text-decoration:none">
-								<font face="Verdana" size="5" color=black>
-									Projects
-								</font>
-							</a>
-						</td>
+<section id="projects">
+  <div class="projects-bg-l"></div>
+  <div class="projects-bg-r"></div>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-badge">My work</span>
+      <h2>Projects</h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">A collection of projects ranging from machine learning applications to automation tools and games.</p>
+    </div>
+    <div class="projects-grid">
 
-						<td>
-							|
-						</td>
+      <div class="project-card reveal" style="transition-delay:0.1s">
+        <div class="pc-top" style="background:linear-gradient(90deg,#a855f7,#ec4899)"></div>
+        <div class="pc-body">
+          <div class="pc-head">
+            <div class="pc-icon" style="background:linear-gradient(135deg,#a855f7,#ec4899)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            </div>
+            <a class="pc-link" href="#" aria-label="View Song Recommender AI">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <h3 class="pc-title">Song Recommender AI</h3>
+          <p class="pc-desc">An intelligent music recommendation system using machine learning algorithms to suggest songs based on user preferences and listening history.</p>
+          <div class="pc-tags">
+            <span class="pc-tag">Python</span><span class="pc-tag">ML</span><span class="pc-tag">TensorFlow</span>
+          </div>
+        </div>
+        <div class="pc-hover-overlay" style="background:linear-gradient(135deg,#a855f7,#ec4899)"></div>
+      </div>
 
-						<td>
-							<a href="#achievements" style="text-decoration:none">
-								<font face="Verdana" size="5" color=black>
-									Achievements
-								</font>
-							</a>
-						</td>
+      <div class="project-card reveal" style="transition-delay:0.15s">
+        <div class="pc-top" style="background:linear-gradient(90deg,#ef4444,#f97316)"></div>
+        <div class="pc-body">
+          <div class="pc-head">
+            <div class="pc-icon" style="background:linear-gradient(135deg,#ef4444,#f97316)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <a class="pc-link" href="#" aria-label="View Malware Analysis ML">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <h3 class="pc-title">Malware Analysis ML</h3>
+          <p class="pc-desc">Analysis and identification of malware using Machine Learning with optimized parameters for improved detection accuracy.</p>
+          <div class="pc-tags">
+            <span class="pc-tag">Python</span><span class="pc-tag">Scikit-learn</span><span class="pc-tag">Security</span>
+          </div>
+        </div>
+        <div class="pc-hover-overlay" style="background:linear-gradient(135deg,#ef4444,#f97316)"></div>
+      </div>
 
-						<td>
-							|
-						</td>
+      <div class="project-card reveal" style="transition-delay:0.2s">
+        <div class="pc-top" style="background:linear-gradient(90deg,#3b82f6,#06b6d4)"></div>
+        <div class="pc-body">
+          <div class="pc-head">
+            <div class="pc-icon" style="background:linear-gradient(135deg,#3b82f6,#06b6d4)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+            </div>
+            <a class="pc-link" href="#" aria-label="View Subway Surfer High Score">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <h3 class="pc-title">Subway Surfer High Score</h3>
+          <p class="pc-desc">Automated bot that achieves high scores in Subway Surfer using computer vision and automated control mechanisms.</p>
+          <div class="pc-tags">
+            <span class="pc-tag">Python</span><span class="pc-tag">OpenCV</span><span class="pc-tag">Automation</span>
+          </div>
+        </div>
+        <div class="pc-hover-overlay" style="background:linear-gradient(135deg,#3b82f6,#06b6d4)"></div>
+      </div>
 
-						<!-- <td>
-							<a href="#contact" style="text-decoration:none">
-								<font face="Verdana" size="5" color=black>
-									Contact
-								</font>
-							</a>
-						</td> -->
-						<!-- <td>
-							|
-						</td> -->
-						<td>
-							<a href="resume.pdf" target="_blank" style="text-decoration:none">
-								<font face="Verdana" size="5" color=black>
-									Resume
-								</font>
-							</a>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-	<!--Header(end)-->
+      <div class="project-card reveal" style="transition-delay:0.25s">
+        <div class="pc-top" style="background:linear-gradient(90deg,#22c55e,#10b981)"></div>
+        <div class="pc-body">
+          <div class="pc-head">
+            <div class="pc-icon" style="background:linear-gradient(135deg,#22c55e,#10b981)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <a class="pc-link" href="https://github.com/patermars/Smishing-Attack-Detection-system" target="_blank" rel="noreferrer" aria-label="View Smishing Detection System">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <h3 class="pc-title">Smishing Detection System</h3>
+          <p class="pc-desc">Machine learning-based system to detect and prevent SMS phishing attacks, protecting users from fraudulent messages.</p>
+          <div class="pc-tags">
+            <span class="pc-tag">Python</span><span class="pc-tag">NLP</span><span class="pc-tag">Security</span>
+          </div>
+        </div>
+        <div class="pc-hover-overlay" style="background:linear-gradient(135deg,#22c55e,#10b981)"></div>
+      </div>
 
-	<!--Home(start)-->
-	<table id="home" border="1" width="100%"
-		cellpadding="20" cellspacing="0" bgcolor="black">
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="90%" align="center">
-					<tr>
-						<td align="center" valign="middle">
-							<h3>
-								<font face="Times New Roman"
-									size="6" color="#ffffff">
-									Hi Visitor!
-								</font>
-							</h3>
+      <div class="project-card reveal" style="transition-delay:0.3s">
+        <div class="pc-top" style="background:linear-gradient(90deg,#dc2626,#f87171)"></div>
+        <div class="pc-body">
+          <div class="pc-head">
+            <div class="pc-icon" style="background:linear-gradient(135deg,#dc2626,#f87171)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            </div>
+            <a class="pc-link" href="https://github.com/patermars/Youtube-Shorts-Automation" target="_blank" rel="noreferrer" aria-label="View YouTube Shorts Automation">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <h3 class="pc-title">YouTube Shorts Automation</h3>
+          <p class="pc-desc">Automated content creation and upload system for YouTube Shorts, streamlining the video production workflow.</p>
+          <div class="pc-tags">
+            <span class="pc-tag">Python</span><span class="pc-tag">API</span><span class="pc-tag">Automation</span>
+          </div>
+        </div>
+        <div class="pc-hover-overlay" style="background:linear-gradient(135deg,#dc2626,#f87171)"></div>
+      </div>
 
-							<h2>
-								<font face="Verdana" size="6"
-									color="#4CAF50">
-									<!-- Freelance Programmer -->
-								</font>
-							</h2>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-	<!--Home(end)-->
+      <div class="project-card reveal" style="transition-delay:0.35s">
+        <div class="pc-top" style="background:linear-gradient(90deg,#f59e0b,#d97706)"></div>
+        <div class="pc-body">
+          <div class="pc-head">
+            <div class="pc-icon" style="background:linear-gradient(135deg,#f59e0b,#d97706)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+            <a class="pc-link" href="https://github.com/patermars/Cat-or-Dog-Image-Classification-Using-CNN-DL-" target="_blank" rel="noreferrer" aria-label="View Cat/Dog CNN Classifier">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <h3 class="pc-title">Cat/Dog CNN Classifier</h3>
+          <p class="pc-desc">Deep learning image classification model using Convolutional Neural Networks to distinguish between cats and dogs.</p>
+          <div class="pc-tags">
+            <span class="pc-tag">Python</span><span class="pc-tag">CNN</span><span class="pc-tag">Keras</span>
+          </div>
+        </div>
+        <div class="pc-hover-overlay" style="background:linear-gradient(135deg,#f59e0b,#d97706)"></div>
+      </div>
 
+      <div class="project-card reveal" style="transition-delay:0.4s">
+        <div class="pc-top" style="background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div>
+        <div class="pc-body">
+          <div class="pc-head">
+            <div class="pc-icon" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>
+            </div>
+            <a class="pc-link" href="#" aria-label="View Guess the Number Game">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <h3 class="pc-title">Guess the Number Game</h3>
+          <p class="pc-desc">Interactive number guessing game with smart hints and scoring system, built with clean code architecture.</p>
+          <div class="pc-tags">
+            <span class="pc-tag">C++</span><span class="pc-tag">Game Logic</span><span class="pc-tag">Console</span>
+          </div>
+        </div>
+        <div class="pc-hover-overlay" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)"></div>
+      </div>
 
-	<!--About(start)-->
-	<table id="about" border="0" width="100%"
-		cellpadding="0" cellspacing="0" bgcolor="black">
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="80%" align="center">
-					<tr>
-						<td height="180" align="center"
-							valign="middle" colspan="2">
-							<font face="Verdana" size="7"
-								color="#4CAF50">
-								About Me
-							</font>
-							<hr color="#4CAF50" width="90">
-						</td>
-					</tr>
+    </div>
+    <div class="projects-footer reveal">
+      <a class="btn-ghost" href="https://github.com/patermars" target="_blank" rel="noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        View More on GitHub
+      </a>
+    </div>
+  </div>
+</section>
 
-					<tr>
-						<td width="40%">
-							<img src="pfp.jpeg">
-						</td>
+<section id="achievements">
+  <div class="ach-bg-tr"></div>
+  <div class="ach-bg-bl"></div>
+  <div class="ach-timeline-line"></div>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-badge">My journey</span>
+      <h2>Achievements</h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">Professional experiences and certifications that have shaped my career in computer science and technology.</p>
+    </div>
+    <div class="ach-list">
 
-						<td width="60%">
-							<font face="Verdana" size="4"
-								color="white">
-								Thanks for your interest, here
-								is a quick story of me and this
-								website.
-								<hr color="black">
-								My name is Aryan Kumar Sinha, and I am a Computer Science Engineering graduate.
-								I love programming and am always eager to learn and try new things.I have hands-on
-								experience with various programming languages, database management, and
-								machine learning. I enjoy solving problems and working on projects that make a
-								difference. My skills cover a range of technologies, and I am excited about
-								discovering more. I am open to opportunities that match my skills and interests.
+      <div class="ach-item">
+        <div class="ach-dot"></div>
+        <div class="ach-card reveal-left" onclick="toggleAch(this)">
+          <div class="ach-card-head">
+            <div class="ach-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <div>
+              <div class="ach-card-title">Computer Science Chegg Expert</div>
+              <div class="ach-org">Chegg Inc.</div>
+            </div>
+          </div>
+          <div class="ach-period">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            April 2022 – October 2022
+          </div>
+          <p class="ach-desc">Worked as a freelance expert answering student queries in programming, data structures, algorithms, and computer science fundamentals.</p>
+          <div class="ach-highlights">
+            <p class="ach-hl-title">Key Highlights:</p>
+            <ul class="ach-hl-list">
+              <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Answered 500+ student questions</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Maintained 95% satisfaction rate</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Specialized in C++, Java, and DSA</li>
+            </ul>
+          </div>
+          <div class="ach-hint">Click to expand</div>
+        </div>
+      </div>
 
-								<hr color="black">
+      <div class="ach-item">
+        <div class="ach-dot"></div>
+        <div class="ach-card reveal-right" onclick="toggleAch(this)">
+          <div class="ach-card-head">
+            <div class="ach-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <div>
+              <div class="ach-card-title">Virtual Internship – Blue Prism</div>
+              <div class="ach-org">Blue Prism</div>
+            </div>
+          </div>
+          <div class="ach-period">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            October 2021 – December 2021
+          </div>
+          <p class="ach-desc">Completed virtual internship program focused on Robotic Process Automation (RPA) using Blue Prism platform.</p>
+          <div class="ach-highlights">
+            <p class="ach-hl-title">Key Highlights:</p>
+            <ul class="ach-hl-list">
+              <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Learned RPA fundamentals</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Built automated workflows</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Certified in Blue Prism basics</li>
+            </ul>
+          </div>
+          <div class="ach-hint">Click to expand</div>
+        </div>
+      </div>
 
-								I do my work mainly in C-Language,
-								C++ and JAVA. C++ and Data Structure
-								& Algorithm are my stronger section.
-								Besides these I know Web Development,
-								LINUX and database as well.
-								<hr color="black">
+      <div class="ach-item">
+        <div class="ach-dot"></div>
+        <div class="ach-card reveal-left" onclick="toggleAch(this)">
+          <div class="ach-card-head">
+            <div class="ach-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div>
+              <div class="ach-card-title">Virtual Internship – VMware</div>
+              <div class="ach-org">VMware</div>
+            </div>
+          </div>
+          <div class="ach-period">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            September 2021 – December 2021
+          </div>
+          <p class="ach-desc">Virtual internship program covering Networking and Security Architecture with VMware NSX.</p>
+          <div class="ach-highlights">
+            <p class="ach-hl-title">Key Highlights:</p>
+            <ul class="ach-hl-list">
+              <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Network virtualization concepts</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Security architecture principles</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>VMware NSX fundamentals</li>
+            </ul>
+          </div>
+          <div class="ach-hint">Click to expand</div>
+        </div>
+      </div>
 
-								Thanks again for reading this,
-								because of people like you, it
-								exists and prospers!
-								<hr color="black">
-								Cheers,
-								<br>
+    </div>
+    <div class="ach-stats">
+      <div class="ach-stat reveal" style="transition-delay:0.1s">
+        <span class="ach-stat-num">3+</span>
+        <span class="ach-stat-lbl">Internships</span>
+      </div>
+      <div class="ach-stat reveal" style="transition-delay:0.2s">
+        <span class="ach-stat-num">7+</span>
+        <span class="ach-stat-lbl">Projects</span>
+      </div>
+      <div class="ach-stat reveal" style="transition-delay:0.3s">
+        <span class="ach-stat-num">500+</span>
+        <span class="ach-stat-lbl">Students Helped</span>
+      </div>
+      <div class="ach-stat reveal" style="transition-delay:0.4s">
+        <span class="ach-stat-num">4+</span>
+        <span class="ach-stat-lbl">Years Experience</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-							</font>
-						</td>
-					</tr>
-				</table>
-				<hr color="black">
-				<hr color="black">
-				<hr color="black">
-			</td>
-		</tr>
-	</table>
-	<!--About(end)-->
+<footer>
+  <div class="ft-blob-l"></div>
+  <div class="ft-blob-r"></div>
+  <div class="container">
+    <div class="ft-main">
+      <div class="ft-grid">
+        <div class="ft-brand">
+          <h3>Aryan Kumar Sinha</h3>
+          <p>Computer Science Engineering graduate passionate about building innovative solutions through code. Always learning, always growing.</p>
+          <div class="ft-socials">
+            <a class="ft-social" href="https://github.com/patermars" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a class="ft-social" href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a class="ft-social" href="mailto:aryan@example.com" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="ft-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><button data-scroll-target="home">Home</button></li>
+            <li><button data-scroll-target="about">About</button></li>
+            <li><button data-scroll-target="projects">Projects</button></li>
+            <li><button data-scroll-target="achievements">Achievements</button></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h4>Get in Touch</h4>
+          <ul>
+            <li><a href="mailto:aryan@example.com">aryan@example.com</a></li>
+            <li><span style="color:#9ca3af">India</span></li>
+            <li><a href="resume.pdf" target="_blank" rel="noreferrer">Download Resume</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <div class="ft-bottom-inner">
+        <p>© <span id="year"></span> Aryan Kumar Sinha. All rights reserved.</p>
+        <div class="ft-heart">
+          Made with
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          and lots of code
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
 
-	<!--Projects(start)-->
-	<table id="projects" border="0" width="100%"
-		cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="80%" align="center">
-					<tr>
-						<td height="180" align="center"
-							valign="middle" colspan="2">
-							<font face="Verdana" size="7"
-								color="black">
-								Projects
-							</font>
-							<hr color="black" width="90">
-						</td>
-					</tr>
-
-					<tr>
-						<td height="10">
-							<font face="Times New Roman"
-								size="5" color="black">
-								<ul>
-									<li>
-										Song recommender AI
-										<a href="#" style="text-decoration:none">
-											 ➲
-										</a>
-									</li>
-
-									<li>
-										<hr color="#c2c0c3">
-										Analysis and Identification of malware using Machine Learning with optimized parameter
-										<a href="#" style="text-decoration:none"
-											color="#c2c0c3">
-											 ➲
-										</a>
-									</li>
-
-									<li>
-										<hr color="#c2c0c3">
-										Setting High Score in Subway Surfer
-										<a href="#" style="text-decoration:none">
-											 ➲
-										</a>
-									</li>
-
-									<li>
-										<hr color="#c2c0c3">
-										Smishing Attack Detection System
-										<a href="https://github.com/patermars/Smishing-Attack-Detection-system" style="text-decoration:none">
-											 ➲
-										</a>
-									</li>
-
-									<li>
-										<hr color="#c2c0c3">
-										Youtube Shorts Automation
-
-										<a href="https://github.com/patermars/Youtube-Shorts-Automation" style="text-decoration:none">
-											 ➲
-										</a>
-									</li>
-
-									<li>
-										<hr color="#c2c0c3">
-										Cat or Dog Image Classification Using CNN DL
-
-										<a href="https://github.com/patermars/Cat-or-Dog-Image-Classification-Using-CNN-DL-" style="text-decoration:none">
-											 ➲
-										</a>
-									</li>
-
-									<li>
-										<hr color="#c2c0c3">
-										Guess the Number Game
-										<a href="#" style="text-decoration:none">
-											 ➲
-										</a>
-									</li>
-
-								<hr color="#c2c0c3">
-								<hr color="#c2c0c3">
-								<hr color="#c2c0c3">
-								<hr color="#c2c0c3">
-							</font>
-						</td>
-
-						<td width="45%">
-							<img src="project.jpg" alt="Project" width="75%">
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-	<!--Projects(end)-->
-
-	<!--Achievement(start)-->
-	<table id="achievements" border="0" width="100%"
-		cellpadding="0" cellspacing="0" bgcolor="black">
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="80%" align="center">
-					<tr>
-						<td height="180" align="center" valign="middle">
-							<font face="Verdana" size="7" color="#4CAF50">
-								Achievements
-								<hr color="#4CAF50" width="100">
-							</font>
-						</td>
-					</tr>
-
-					<tr>
-						<td>
-							<font face="Verdana" size="4" color="white">
-								<ul>
-									<li>
-										<b>Worked as a Computer Science Chegg Expert</b>
-										<ul>
-											<li>
-												April,2022 - October,2022.
-											</li>
-											<li>
-												 Worked as freelance experts and answer student queries in the programming.
-											</li>
-										</ul>
-									</li>
-
-									<li>
-										<hr color="black">
-										<hr color="black">
-										<hr color="black">
-										<b>Virtual Internship in Blue Prism</b>
-										<ul>
-											<li>
-												October,2021 - December,2021.
-											</li>
-											<li>
-												Attended classes and learned about Robotic Process Automation.
-											</li>
-										</ul>
-									</li>
-
-									<li>
-										<hr color="black">
-										<hr color="black">
-										<hr color="black">
-										<b>Virtual Internship By Vmware.</b>
-										<ul>
-											<li>
-												Septemeber,2021 - December,2021.
-											</li>
-											<li>
-												Learned about Networking And Security Architecture With Vmware NSX.
-											</li>
-											<hr color="black">
-											<hr color="black">
-											<hr color="black">
-											<hr color="black">
-											<hr color="black">
-										</ul>
-									</li>
-
-								</ul>
-
-							</font>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table>
-	<!--Achievement(end)-->
-
-
-	<!-- Contact(start)-->
-	<!-- <table id="contact" border="0" width="100%"
-		cellpadding="0" cellspacing="0" bgcolor="#c2c0c3">
-		<tr>
-			<td>
-				<table border="0" cellpadding="15"
-					cellspacing="0" width="80%" align="center">
-					<tr>
-						<td height="180" align="center"
-							valign="middle" colspan="2">
-							<font face="Verdana" size="7"
-								color="black">
-								Contact
-							</font>
-							<hr color="black" width="90">
-						</td>
-					</tr>
-
-					<tr>
-						<td align="center" valign="top">
-							<table border="0" width="50%" cellpadding="15"
-								cellspacing="0" align="center" bgcolor="#c2c0c3">
-								<tr>
-									<td width="30%">
-										<hr color="#c2c0c3">
-										<font face="Verdana" size="4"
-											color="black">
-											Name
-										</font>
-									</td>
-									<td width="70%">
-										<font face="Verdana" size="4"
-											color="#ffffff">
-											<input type="text" size="40">
-										</font>
-									</td>
-								</tr>
-								<tr>
-									<td width="30%">
-										<font face="Verdana" size="4"
-											color="black">
-											Email
-										</font>
-									</td>
-									<td width="70%">
-										<font face="Verdana" size="4"
-											color="#ffffff">
-											<input type="email" size="40">
-										</font>
-									</td>
-								</tr>
-								<tr>
-									<td width="30%">
-										<font face="Verdana" size="4"
-											color="black">
-											Number
-										</font>
-									</td>
-									<td width="70%">
-										<font face="Verdana" size="4"
-											color="#ffffff">
-											<input type="number" size="12">
-										</font>
-									</td>
-								</tr>
-								<tr>
-									<td width="30%">
-										<font face="Verdana" size="4"
-											color="black">
-											Message
-										</font>
-									</td>
-									<td width="70%">
-										<font face="Verdana" size="4"
-											color="#ffffff">
-											<textarea rows="5"
-												cols="37">
-											</textarea>
-										</font>
-									</td>
-								</tr>
-								<tr>
-									<td width="30%">
-										
-									</td>
-									<td width="70%">
-										<button type="Submit">
-											<font face="Verdana"
-												size="4" color="black">
-												<b>Submit</b>
-											</font>
-										</button>
-									</td>
-								</tr>
-							</table>
-						</td>
-
-					</tr>
-					<tr>
-						<td colspan="2">
-							
-							
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-	</table> -->
-	<!--Contact(end) -->
-
-
-	
-
+<script src="script.js"></script>
 </body>
-
 </html>
