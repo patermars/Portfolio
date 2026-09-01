@@ -15,8 +15,12 @@ window.scrollToSection = scrollToSection;
 document.getElementById('year').textContent = new Date().getFullYear();
 
 const html = document.documentElement;
-html.removeAttribute('data-theme');
-localStorage.setItem('theme', 'light');
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  html.setAttribute('data-theme', 'dark');
+} else {
+  html.removeAttribute('data-theme');
+}
 
 function toggleTheme() {
   const isDark = html.getAttribute('data-theme') === 'dark';
@@ -91,6 +95,42 @@ const revealObs = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .skill-card')
   .forEach(el => revealObs.observe(el));
+
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector('.contact-submit');
+    const status = contactForm.querySelector('.contact-status');
+    const originalButtonText = submitButton.firstChild;
+
+    submitButton.disabled = true;
+    originalButtonText.textContent = 'Sending...';
+    status.className = 'contact-status';
+    status.textContent = '';
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) throw new Error('Form submission failed');
+
+      contactForm.reset();
+      status.classList.add('success');
+      status.textContent = 'Your message was sent successfully.';
+    } catch (error) {
+      status.classList.add('error');
+      status.textContent = 'Something went wrong. Please try emailing me directly.';
+    } finally {
+      submitButton.disabled = false;
+      originalButtonText.textContent = 'Send Message';
+    }
+  });
+}
 
 function toggleAch(card) {
   const hl = card.querySelector('.ach-highlights');
