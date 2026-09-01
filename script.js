@@ -15,11 +15,8 @@ window.scrollToSection = scrollToSection;
 document.getElementById('year').textContent = new Date().getFullYear();
 
 const html = document.documentElement;
-const saved = localStorage.getItem('theme');
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-if (saved === 'dark' || (!saved && prefersDark)) {
-  html.setAttribute('data-theme', 'dark');
-}
+html.removeAttribute('data-theme');
+localStorage.setItem('theme', 'light');
 
 function toggleTheme() {
   const isDark = html.getAttribute('data-theme') === 'dark';
